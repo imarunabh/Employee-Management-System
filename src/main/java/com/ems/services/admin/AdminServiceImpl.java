@@ -20,10 +20,10 @@ public class AdminServiceImpl {
 	@PostConstruct
 	public void createUserAccount() {
 		User user = new User();
-		user.setEmail("admin@test.com");
-		user.setName("admin");
-		user.setRole(UserRole.ADMIN);
-		user.setPassword(new BCryptPasswordEncoder().encode("admin"));
+		user.setEmail("employee@test.com");
+		user.setName("employee");
+		user.setRole(UserRole.EMPLOYEE);
+		user.setPassword(new BCryptPasswordEncoder().encode("employee"));
 		userRepository.save(user);
 	}
 
